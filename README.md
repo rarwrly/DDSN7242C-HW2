@@ -7,14 +7,14 @@ API endpoint: https://jsonplaceholder.typicode.com/
 
 []1. Make an API call to retrieve all of the posts.
 []2. Make an API call to retrieve all of the users.
-[]3. Display the author's name and the post title and body on the page.
+[]3. Display the author's name and the post title and body on the page. ** Note: the userId in the Post details matches the id in the user detials
 
 Grading criteria:
 []1. Use fetch, 
   []async, and
   [] await.
   
-[]2. Use the find() method.
+[]2. Use the find() method. (to ID the author?) https://www.javascripttutorial.net/es6/javascript-array-find/
 
 []3. Use only ES6+ techniques if needed: template strings (`${}`), arrow functions, forEach(), etc.
 
