@@ -43,16 +43,3 @@ const showPosts = async () => {
 
 showPosts();
 
-
-
-
-//use find to get the username iD
-
-/*const getUserName = (idUser) =>{
-    const foundUserName = users.find((id)=> {
-        return idUser=== users.id;
-    });
-};*/
-
-// first publish all posts on the page
-// for each go in and replace the user ID with the userName
