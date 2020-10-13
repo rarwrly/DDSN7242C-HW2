@@ -5,14 +5,14 @@ Build a web application that shows a list of posts and information about the pos
 
 API endpoint: https://jsonplaceholder.typicode.com/
 
-[]1. Make an API call to retrieve all of the posts.
-[]2. Make an API call to retrieve all of the users.
+[x]1. Make an API call to retrieve all of the posts.
+[x]2. Make an API call to retrieve all of the users.
 []3. Display the author's name and the post title and body on the page. ** Note: the userId in the Post details matches the id in the user detials
 
 Grading criteria:
-[]1. Use fetch, 
-  []async, and
-  [] await.
+[x]1. Use fetch, 
+  [x]async, and
+  [x] await.
   
 []2. Use the find() method. (to ID the author?) https://www.javascripttutorial.net/es6/javascript-array-find/
 

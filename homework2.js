@@ -1,25 +1,47 @@
-const result =document.querySelector(".results");
+const getUsers = async () =>{
+    const usersResponse = await fetch(
+        'https://jsonplaceholder.typicode.com/users'
+    );
+    const users = await usersResponse.json();
+    return users;
+};
 
 const getPosts = async () => {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const posts = await response.json();
+    const postResponse = await fetch(
+        "https://jsonplaceholder.typicode.com/posts"
+    );
+    const posts = await postResponse.json();
+    return posts;
+};
 
-  const postTitles = posts.map(post =>
-    `<div class ="title"><h1>${post.title}</h1></div><div class ="author"> Author: ${post.userId}</div><div class ="postBody">${post.body}</div>`);
-      result.innerHTML += postTitles.join("");
-  return postTitles;
+
+const displayPosts = (posts,users)=>{
+
+    const result =document.querySelector(".results");
+    const postContent = posts.map(post =>{
+    const foundUser= users.find((user)=>
+                   user.id === post.userId
+        );
+     return `<div class ="title"><h1>${post.title}</h1></div><div class ="author"> Author: ${foundUser.name}</div><div class ="postBody">${post.body}</div>`;
+        
+    });
+      result.innerHTML += postContent.join("");
+
    
 };
 
-getPosts();
-/*const getUsers = async (Users) =>{
-    
-    const usersResponse = await fetch(
-    'https://jsonplaceholder.typicode.com/users'
-    );
-    
-    const users = await response.json();
-};*/
+const showPosts = async () => {
+    try{
+        const users = await getUsers();
+        const posts =await getPosts();
+        displayPosts(posts,users);
+    }catch(error){
+        document.body.innerHTML =`HerpDerp apologies, a snake got in the server room and caused an error:${error}`;
+    }
+
+};
+
+showPosts();
 
 
 
