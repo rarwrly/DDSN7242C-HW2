@@ -1,3 +1,16 @@
-      body {
-        font-family: consolas;
-      }
+body {
+    font-family: consolas;
+    width: 75%;
+    padding-left: 25px;
+}
+.title{
+    text-decoration: underline;
+}
+.author{
+    font-style: italic;
+}
+.postBody{
+    padding-left: 25px;
+    padding-top 10px;
+    padding-bottom:10px;
+}
